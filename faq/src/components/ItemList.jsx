@@ -2,19 +2,24 @@ import React, { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import SingleItem from "./SingleItem";
 
-const ItemList = (items) => {
-  const [faqs, setfaqs] = useState([]);
-  useEffect(async () => {
-    console.log("items:", items);
-    setfaqs(items.items);
+const ItemList = ({faqsList}) => {
+  useEffect(() => {
+    console.log(faqsList);
   }, []);
 
   return (
-    <Accordion defaultActiveKey="0">
-      {faqs.map((item, index) => (
-        <SingleItem key={index} question={item.question} answer={item.answer} />
-      ))}
-    </Accordion>
+    <div>
+      {faqsList.length > 0 ? (
+        <Accordion defaultActiveKey="0">
+          {faqsList.map((item,index) => (
+            // <p>{item.question}</p>
+            <SingleItem key={index} index={index} question={item.question} answer={item.answer} />
+          ))}
+        </Accordion>
+      ) : (
+        <div>No items</div>
+      )}
+    </div>
   );
 };
 

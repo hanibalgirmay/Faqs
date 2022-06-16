@@ -1,22 +1,25 @@
 import "./App.css";
 import ItemList from "./components/ItemList";
 import React, { useEffect, useState } from "react";
+import { getData } from "./services/api";
 
 let initialState = {
-  question: "test",
+  question: "",
   answer: "",
 };
 
 const App = () => {
-  const [faqs, setFaqs] = React.useState([initialState]);
+  const [faqs, setFaqs] = useState([initialState]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  useEffect(async() => {
     setLoading(true);
-    setTimeout(() => {
-      setFaqs(faqs);
-      setLoading(false);
-    }, 1000);
+    let { questions } = await getData();
+    console.log("00__",questions)
+    setFaqs(questions);
+    console.log('fff',setFaqs(questions))
+    console.log('f',faqs)
+    setLoading(false);
   }, []);
 
   return (
@@ -30,7 +33,7 @@ const App = () => {
             <div className="loading-spinner">loading...</div>
           </div>
         ) : (
-          <ItemList items={faqs} />
+          <ItemList faqsList={faqs} />
         )}
       </div>
     </div>

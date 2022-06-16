@@ -1,11 +1,15 @@
-import React from "react";
 import { Accordion } from "react-bootstrap";
+import {useEffect} from 'react';
 
-const SingleItem = ({ question, answer }) => {
+const SingleItem = ({ index, question, answer }) => {
+  useEffect(() => {
+    console.log(index)
+  }, [])
+  
   return (
-    <Accordion.Item eventKey="0">
-      <Accordion.Header>{{ question }}</Accordion.Header>
-      <Accordion.Body>{{ answer }}</Accordion.Body>
+    <Accordion.Item eventKey={index}>
+      <Accordion.Header>{ question }</Accordion.Header>
+      <Accordion.Body>{ answer }</Accordion.Body>
     </Accordion.Item>
   );
 };
