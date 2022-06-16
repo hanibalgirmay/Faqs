@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f2f2f2;
+}
+
+.v-main {
+  background: #f2f2f2 !important;
+}
+
+.banner {
+  height: 25vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("https://cdn.mos.cms.futurecdn.net/nweoCVrjc376xm23LGVkN3.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(44, 43, 43, 0.3);
+          box-shadow: inset 0 0 0 2000px rgba(44, 43, 43, 0.3);
+}
+
+.title {
+  font-size: 1.9rem !important;
+  color: #0c0c0c;
+  margin: 2rem;
+  text-align: center !important;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=main.css.map */
