@@ -1,15 +1,28 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(242, 242, 242);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(242, 242, 242);
 }
 .v-main {
-    background: rgb(242, 242, 242) !important;
+  background: rgb(242, 242, 242) !important;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  background: red;
+  border-radius: 4px;
+  color: #fff;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    opacity: .8;
+    box-shadow: 12px 3px 7px rgba(0, 0, 0, .4);
+  }
 }

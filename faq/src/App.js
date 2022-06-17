@@ -2,6 +2,7 @@ import "./App.css";
 import ItemList from "./components/ItemList";
 import React, { useEffect, useState } from "react";
 import { getData } from "./services/api";
+import Nav from "./components/Nav";
 
 let initialState = {
   question: "",
@@ -25,6 +26,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="banner">
+        <Nav />
         <h2>Fequently asked Questions</h2>
       </header>
       <div className="container">

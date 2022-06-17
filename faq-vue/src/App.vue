@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <div class="banner">
-      </div>
+      <Nav />
+    </div>
     <v-main>
       <v-container>
         <v-row>
@@ -20,11 +21,13 @@
 <script>
 import FaqItemVue from "./components/FaqItem.vue";
 import api from "./services/api";
+import Nav from "./components/Nav.vue";
 
 export default {
   name: "App",
   components: {
     FaqItemVue,
+    Nav,
   },
 
   data: () => ({
